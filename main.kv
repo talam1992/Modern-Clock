@@ -1,0 +1,13 @@
+#: include kv/clockscreen.kv
+#: include kv/stopwatchscreen.kv
+
+FloatLayout:
+    ScreenManager:
+        id: screen_manager
+
+        ClockScreen:
+            name: "clock_screen"
+            id: clock_screen
+        StopwatchScreen:
+            name: "stopwatch_screen"
+            id: stopwatch_screen
