@@ -1,4 +1,19 @@
 <ClockScreen>:
     ImageButton:
         source: 'icons/next.png'
+        size_hint: (None, None)
+        width: '30dp'
+        height: '30dp'
+        pos: 720,550
         on_release: app.go_forward()
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            id: time
+            text: '[b]00[/b]:00:00'
+            font_name : 'Roboto'
+            font_size: 130
+            markup: True
+

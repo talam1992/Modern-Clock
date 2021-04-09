@@ -1,4 +1,46 @@
 <StopwatchScreen>:
     ImageButton:
         source: 'icons/prev.png'
+        size_hint: (None,None)
+        width: '30dp'
+        height: '30dp'
+        pos: 20,550
         on_release: app.go_back()
+
+    Label:
+        id: stopwatch
+        font_name: 'Roboto'
+        font_size:180
+        pos: 10,50
+        markup: True
+        text: '00:00.[size=40]00[/size]'
+
+
+    BoxLayout:
+        orientation: 'horizontal'
+        height: 90
+        padding: 20
+        spacing: 20
+        size_hint:(1,None)
+
+        Button:
+            id: start_stop
+            text: 'Start'
+            font_name: 'Roboto'
+            font_size: 25
+            bold: True
+            on_press: app.start_stop()
+            background_normal : 'icons/button_normal.png'
+            background_down : 'icons/button_down.png'
+            border:(2,2,2,2)
+
+        Button:
+            id: reset
+            text: 'Reset'
+            font_name: 'Roboto'
+            font_size: 25
+            bold: True
+            on_press: app.reset()
+            background_normal:'icons/red_button_normal.png'
+            background_down: 'icons/red_button_down.png'
+            border:(2,2,2,2)
